@@ -41,4 +41,5 @@ $oSerialise.auth = "0424bd59b807674191e7d77572075f33"
 
 $oDeserialise = New-Object JsonTest
 
-$oDeserialise = [Newtonsoft.Json.JsonConvert]::DeSerializeObject($jsonString)
+#Call static method to deserialise json string to .Net object
+[Newtonsoft.Json.JsonConvert]::Populate($jsonString,$oDeserialise)
